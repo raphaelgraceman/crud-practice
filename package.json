@@ -1,0 +1,31 @@
+{
+  "name": "crud-practice",
+  "version": "1.0.0",
+  "description": "CRUD Practice",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "restart": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raphaelgraceman/contacts.git"
+  },
+  "author": "Dotse Raphael",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/raphaelgraceman/contacts/issues"
+  },
+  "homepage": "https://github.com/raphaelgraceman/contacts#readme",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "swagger-autogen": "^2.23.7",
+    "swagger-ui-express": "^5.0.1"
+  },
+  "devDependencies": {
+    "mongodb": "^6.15.0",
+    "nodemon": "^3.1.9"
+  }
+}

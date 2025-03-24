@@ -1,0 +1,150 @@
+#Localhost | Running on port 3000
+##Local Deployment
+
+
+##getAll Employee Info
+GET http://localhost:3000/employees
+
+###getAll Expenses Data
+GET http://localhost:3000/expenses      
+
+### getSingle employee info by id
+GET http://localhost:3000/employees/67e14f677e6ca89b6791efa4
+
+### getSingle expenses data by id
+GET http://localhost:3000/expenses/67e1519d7e6ca89b6791efa7
+
+### Add employee info 
+POST http://localhost:3000/employees HTTP/1.1
+content-type: application/json
+
+{
+"firstName": "Kumah",
+"lastName": "Gabriel",
+"birthDay": "12/2/2000",
+"email": "kumahgabriel@gmail.com",
+"department": "Administrative",
+"appointmentDate": "01/12/2024",
+"salary": "4,000.00"
+}
+
+### Add expenses Data
+POST http://localhost:3000/expenses HTTP/1.1
+content-type: application/json
+
+{
+  "name": "petrol",
+  "category": "Transportation",
+  "date": "24/03/2025",
+  "amount": "20.00"
+}
+
+### Update Employee Info by id
+PUT http://localhost:3000/employees/67e14f677e6ca89b6791efa4 HTTP/1.1
+content-type: application/json
+
+{
+"firstName": "Raphael",
+"lastName": "Dotse",
+"birthDay": "11/11/2011",
+"email": "raphael@gmail.com",
+"department": "Administrative",
+"appointmentDate": "01/12/2024",
+"salary": "4,000.00"
+}
+
+### Update Expenses data by id
+PUT http://localhost:3000/expenses/67e1519d7e6ca89b6791efa7 HTTP/1.1
+content-type: application/json
+
+{
+  "name": "Gasoline",
+  "category": "Transportation",
+  "date": "20/03/2025",
+  "amount": "50.00"
+}
+
+
+### DELETE Employee Info
+DELETE http://localhost:3000/employees/67e14f677e6ca89b6791efa4 HTTP/1.1
+
+### DELETE expenses data by id
+DELETE http://localhost:3000/expenses/67e1519d7e6ca89b6791efa7 HTTP/1.1
+
+
+
+
+
+
+// Render.com production Deployment
+### Get all employees
+GET https://crud-practice-l9ii.onrender.com/employees
+
+
+### Get all expenses
+GET https://crud-practice-l9ii.onrender.com/expenses
+
+### Get employees by id
+GET https://crud-practice-l9ii.onrender.com/employees/67e14f677e6ca89b6791efa4
+
+
+### Get expenses by id
+GET https://crud-practice-l9ii.onrender.com/expenses/67e1519d7e6ca89b6791efa7
+
+
+### Add Employees Info
+POST https://crud-practice-l9ii.onrender.com/employees HTTP/1.1
+content-type: application/json
+
+{
+"firstName": "#",
+"lastName": "#",
+"birthDay": "#",
+"email": "#",
+"department": "#",
+"appointmentDate": "#",
+"salary": "#"
+}
+
+
+### Add Expenses Data
+POST https://crud-practice-l9ii.onrender.com/expenses HTTP/1.1
+content-type: application/json
+
+{
+  "name": "Gasoline",
+  "category": "Transportation",
+  "date": "20/03/2025",
+  "amount": "50.00"
+}
+
+### Update Employee Info
+PUT https://crud-practice-l9ii.onrender.com/employees/67e14f677e6ca89b6791efa4 HTTP/1.1
+content-type: application/json
+
+{
+"firstName": "#",
+"lastName": "#",
+"birthDay": "#",
+"email": "#",
+"department": "#",
+"appointmentDate": "#",
+"salary": "#"
+}
+
+### Update Expenses Data
+PUT https://crud-practice-l9ii.onrender.com/expenses/67e1519d7e6ca89b6791efa7 HTTP/1.1
+content-type: application/json
+
+{
+  "name": "Gasoline",
+  "category": "Transportation",
+  "date": "20/03/2025",
+  "amount": "100.00"
+}
+
+### DELETE Employee Info
+DELETE https://crud-practice-l9ii.onrender.com/employees/67e14f677e6ca89b6791efa4 HTTP/1.1
+
+### DELETE Expenses Data
+DELETE https://crud-practice-l9ii.onrender.com/expenses/67e1519d7e6ca89b6791efa7 HTTP/1.1
