@@ -1,5 +1,7 @@
 const dotenv = require('dotenv');
+
 dotenv.config();//An instance of dotenv method
+
 //import mongoClient and require its instance of method
 const MongoClient = require('mongodb').MongoClient;
 

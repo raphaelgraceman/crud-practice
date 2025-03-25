@@ -1,7 +1,7 @@
 //importing database
 const mongodb = require('../database/connect');
 //create an object of mongodb ID for the database
-const ObjectId = require('mongodb').ObjectId;
+const ObjectId = require('mongodb').ObjectId
 
 //getAll Employee info
 const getAllEmployeeInfo = async(req, res) => {

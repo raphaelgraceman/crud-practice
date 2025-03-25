@@ -1,8 +1,8 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const app = express();
 //import database to connect with
 const mongodb = require('./database/connect');
+const app = express();
 
 
 //Setting app to listen on port 3000
@@ -32,8 +32,7 @@ mongodb.initDb((err) => {
     if (err) {
         console.log(err);
     }
-    else
-    {
+    else {
         //Display Success message upon Connection
         app.listen(port, () => {
             console.log('Server published and Running on port', port);
