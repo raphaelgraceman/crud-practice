@@ -18,8 +18,8 @@ app
     );
     res.setHeader('Access-Control-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
     next();
-  })
-  
+})
+
  app.use("/", require("./routes"));
   
 process.on('uncaughtException', (err, origin) => {

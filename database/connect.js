@@ -13,7 +13,7 @@ const initDb = (callback) => {
         return callback(null, database);
     }
     //else connect to mongodb url and then return the request of the client or return error
-    MongoClient.connect(process.env.MONGODB_URI)
+    MongoClient.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
         .then((client) => {
             database = client;
             callback(null, database);
