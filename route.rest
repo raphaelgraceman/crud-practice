@@ -78,22 +78,22 @@ DELETE http://localhost:3000/expenses/67e1519d7e6ca89b6791efa7 HTTP/1.1
 
 // Render.com production Deployment
 ### Get all employees
-GET https://crud-practice-l9ii.onrender.com/employees
+GET https://crud-practice-jtlg.onrender.com/employees
 
 
 ### Get all expenses
-GET https://crud-practice-l9ii.onrender.com/expenses
+GET https://crud-practice-jtlg.onrender.com/expenses
 
 ### Get employees by id
-GET https://crud-practice-l9ii.onrender.com/employees/67e18078fc5fbe68374dc268
+GET https://crud-practice-jtlg.onrender.com/employees/67e18078fc5fbe68374dc268
 
 
 ### Get expenses by id
-GET https://crud-practice-l9ii.onrender.com/expenses/67e1519d7e6ca89b6791efa7
+GET https://crud-practice-jtlg.onrender.com/expenses/67e1519d7e6ca89b6791efa7
 
 
 ### Add Employees Info
-POST https://crud-practice-l9ii.onrender.com/employees HTTP/1.1
+POST https://crud-practice-jtlg.onrender.com/employees HTTP/1.1
 content-type: application/json
 
 {
@@ -110,7 +110,7 @@ content-type: application/json
 
 
 ### Add Expenses Data
-POST https://crud-practice-l9ii.onrender.com/expenses HTTP/1.1
+POST https://crud-practice-jtlg.onrender.com/expenses HTTP/1.1
 content-type: application/json
 
 {
@@ -124,7 +124,7 @@ content-type: application/json
 }
 
 ### Update Employee Info
-PUT https://crud-practice-l9ii.onrender.com/employees/67e18078fc5fbe68374dc268 HTTP/1.1
+PUT https://crud-practice-jtlg.onrender.com/67e18078fc5fbe68374dc268 HTTP/1.1
 content-type: application/json
 
 {
@@ -140,7 +140,7 @@ content-type: application/json
 }
 
 ### Update Expenses Data
-PUT https://crud-practice-l9ii.onrender.com/expenses/67e1519d7e6ca89b6791efa7 HTTP/1.1
+PUT https://crud-practice-jtlg.onrender.com/expenses/67e1519d7e6ca89b6791efa7 HTTP/1.1
 content-type: application/json
 
 {
@@ -154,7 +154,7 @@ content-type: application/json
 }
 
 ### DELETE Employee Info
-DELETE https://crud-practice-l9ii.onrender.com/employees/67e18078fc5fbe68374dc268 HTTP/1.1
+DELETE https://crud-practice-jtlg.onrender.com/employees/67e18078fc5fbe68374dc268 HTTP/1.1
 
 ### DELETE Expenses Data
-DELETE https://crud-practice-l9ii.onrender.com/expenses/67e1519d7e6ca89b6791efa7 HTTP/1.1
+DELETE https://crud-practice-jtlg.onrender.com/expenses/67e1519d7e6ca89b6791efa7 HTTP/1.1

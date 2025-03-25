@@ -5,7 +5,7 @@
     "description": "CRUD PRACTICE API",
     "version": "1.0.0"
   },
-  "host": "crud-practice-l9ii.onrender.com",
+  "host": "crud-practice-jtlg.onrender.com",
   "basePath": "/",
   "schemes": [
     "https"
