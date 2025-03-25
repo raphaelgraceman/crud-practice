@@ -103,7 +103,9 @@ content-type: application/json
 "email": "#",
 "department": "#",
 "appointmentDate": "#",
-"salary": "#"
+"salary": "#",
+"qualification": "#",
+"function": "#"
 }
 
 
@@ -115,7 +117,10 @@ content-type: application/json
   "name": "Gasoline",
   "category": "Transportation",
   "date": "20/03/2025",
-  "amount": "50.00"
+  "amount": "50.00",
+  "month": "#",
+  "day": "#",
+  "paymentType": "#"
 }
 
 ### Update Employee Info
@@ -129,7 +134,9 @@ content-type: application/json
 "email": "#",
 "department": "#",
 "appointmentDate": "#",
-"salary": "#"
+"salary": "#",
+"qualification": "#",
+"function": "#"
 }
 
 ### Update Expenses Data
@@ -140,7 +147,10 @@ content-type: application/json
   "name": "Gasoline",
   "category": "Transportation",
   "date": "20/03/2025",
-  "amount": "100.00"
+  "amount": "100.00",
+  "month": "#",
+  "day": "#",
+  "paymentType": "#"
 }
 
 ### DELETE Employee Info
