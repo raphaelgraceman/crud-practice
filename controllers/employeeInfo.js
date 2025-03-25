@@ -6,7 +6,7 @@ const ObjectId = require('mongodb').ObjectId
 //getAll Employee info
 const getAllEmployeeInfo = async(req, res) => {
    //#swagger tags =['Welcome to the Info View']
-    const result = await mongodb.getDatabase().db().collection('employees').find();
+    const result = await mongodb.getDatabase().db("crud").collection('employees').find();
     result.toArray().then((employees) => {
         res.setHeader('Content-Type', 'application/json');
         res.status(200).json(employees)
@@ -21,7 +21,7 @@ const getSingleEmployeeInfo = async(req, res) => {
     }
 
     const employeeId = new ObjectId(req.params.id);
-    const result = await mongodb.getDatabase().db().collection('employees').find({_id: employeeId});
+    const result = await mongodb.getDatabase().db("crud").collection('employees').find({_id: employeeId});
     result.toArray().then((employees) => {
         res.setHeader("Content-Type", 'application/json');
         res.status(200).json(employees[0]);
@@ -40,7 +40,7 @@ const addEmployeeInfo = async (req, res) => {
       appointedDate: req.body.appointedDate,
       salary: req.body.salary
     };
-    const response = await mongodb.getDatabase().db().collection('employees').insertOne(employee);
+    const response = await mongodb.getDatabase().db("crud").collection('employees').insertOne(employee);
     if (response.acknowledged) {
       res.status(201).json(response);
     } else {
@@ -65,7 +65,7 @@ const updateEmployeeInfo = async (req, res) => {
         salary: req.body.salary
       };
     const response = await mongodb
-      .getDatabase().db().collection('employees').replaceOne({ _id: employeeId }, employee);
+      .getDatabase().db("crud").collection('employees').replaceOne({ _id: employeeId }, employee);
     console.log(response);
     if (response.modifiedCount > 0) {
       res.status(204).send();
@@ -82,7 +82,7 @@ const deleteEmployeeInfo = async (req, res) => {
   }
   const employeeId = new ObjectId(req.params.id);
 
-  const response = await mongodb.getDatabase().db().collection('employees').deleteOne({ _id: employeeId }, true);
+  const response = await mongodb.getDatabase().db("crud").collection('employees').deleteOne({ _id: employeeId }, true);
   console.log(response);
   if (response.deletedCount > 0) {
     res.status(204).send();

@@ -35,7 +35,7 @@ mongodb.initDb((err) => {
     else {
         //Display Success message upon Connection
         app.listen(port, () => {
-            console.log('Server published and Running on port', port);
+            console.log('Database listening and Running on port', port);
         });
     }
 });
