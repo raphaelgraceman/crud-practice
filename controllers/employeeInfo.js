@@ -28,13 +28,13 @@ const getSingleEmployeeInfo = async(req, res) => {
     }); 
 };
 
-//Create Employee
+//Create Employee A/C
 const addEmployeeInfo = async (req, res) => {
      //#swagger tags =['Welcome to the Info View']
     const employee = {
       firstName: req.body.firstName,
       lastName: req.body.lastName,
-      birthday: req.body.birthday,
+      birthDay: req.body.birthday,
       email: req.body.email,
       department: req.body.department,
       appointedDate: req.body.appointedDate,
@@ -42,7 +42,7 @@ const addEmployeeInfo = async (req, res) => {
     };
     const response = await mongodb.getDatabase().db().collection('employees').insertOne(employee);
     if (response.acknowledged) {
-      res.status(201).json(response);
+      res.status(201).json(response.acknowledged || 'Employee added successfully');
     } else {
       res.status(500).json(response.error || 'Some error occurred while adding Employee Info.');
     }
@@ -58,7 +58,7 @@ const updateEmployeeInfo = async (req, res) => {
     const employee = {
         firstName: req.body.firstName,
         lastName: req.body.lastName,
-        birthday: req.body.birthday,
+        birthDay: req.body.birthday,
         email: req.body.email,
         department: req.body.department,
         appointedDate: req.body.appointedDate,
@@ -68,7 +68,7 @@ const updateEmployeeInfo = async (req, res) => {
       .getDatabase().db().collection('employees').replaceOne({ _id: employeeId }, employee);
     console.log(response);
     if (response.modifiedCount > 0) {
-      res.status(204).send();
+      res.status(201).send('Employee Info updated successfully');
     } else {
       res.status(500).json(response.error || 'Some error occurred while updating the EmployeeInfo');
     }
@@ -85,9 +85,9 @@ const deleteEmployeeInfo = async (req, res) => {
   const response = await mongodb.getDatabase().db().collection('employees').deleteOne({ _id: employeeId }, true);
   console.log(response);
   if (response.deletedCount > 0) {
-    res.status(204).send();
+    res.status(201).send("Employee Info successfully deleted");
   } else {
-    res.status(500).json(response.error || 'Some error occurred while deleting the EmployeeInfo.');
+    res.status(404).json(response.error || 'Use a valid id, no employee found.');
   }
 };
 

@@ -41,7 +41,7 @@ const addExpenses = async (req, res) => {
     if (response.acknowledged) {
       res.status(201).json(response);
     } else {
-      res.status(500).json(response.error || 'Some error occurred while adding Expenses Info.');
+      res.status(500).json(response.error || 'Error occurred adding Expenses Info.');
     }
 };
 
@@ -49,7 +49,7 @@ const addExpenses = async (req, res) => {
 const updateExpenses = async (req, res) => {
     //#swagger tags =['Welcome to the Info View']
     if (!ObjectId.isValid(req.params.id)) {
-      res.status(400).json('Must use a valid expense id to update Expenses Info');
+      res.status(400).json('Must use a valid expense id to update Expenses data');
     }
     const expenseId = new ObjectId(req.params.id);
     const expense = {
@@ -64,7 +64,7 @@ const updateExpenses = async (req, res) => {
     if (response.modifiedCount > 0) {
       res.status(204).send();
     } else {
-      res.status(500).json(response.error || 'Some error occurred while updating the Expenses Info');
+      res.status(500).json(response.error || 'Error occurred while updating the Expenses data');
     }
 };
 
@@ -81,7 +81,7 @@ const deleteExpenses = async (req, res) => {
   if (response.deletedCount > 0) {
     res.status(204).send();
   } else {
-    res.status(500).json(response.error || 'Some error occurred while deleting the Expenditure Info.');
+    res.status(500).json(response.error || 'Error occurred while deleting the Expenditure Info.');
   }
 };
 

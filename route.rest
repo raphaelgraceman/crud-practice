@@ -9,7 +9,7 @@ GET http://localhost:3000/employees
 GET http://localhost:3000/expenses      
 
 ### getSingle employee info by id
-GET http://localhost:3000/employees/67e18078fc5fbe68374dc268
+GET http://localhost:3000/employees/67f49b77a86a09bae533a45e
 
 ### getSingle expenses data by id
 GET http://localhost:3000/expenses/67e1519d7e6ca89b6791efa7
@@ -17,34 +17,33 @@ GET http://localhost:3000/expenses/67e1519d7e6ca89b6791efa7
 ### Add employee info 
 POST http://localhost:3000/employees HTTP/1.1
 content-type: application/json
-
-{
-"firstName": "Kumah",
-"lastName": "Gabriel",
-"birthDay": "12/2/2000",
-"email": "kumahgabriel@gmail.com",
-"department": "Administrative",
-"appointmentDate": "01/12/2024",
-"salary": "4,000.00"
-}
+  {
+    "firstName": "Matthew",
+    "lastName": "John Doe",
+    "birthDay": null,
+    "email": "jaelwilde@gmail.com",
+    "department": "Administrative",
+    "appointedDate": null,
+    "salary": "4,000.00"
+  }
 
 ### Add expenses Data
 POST http://localhost:3000/expenses HTTP/1.1
 content-type: application/json
 
 {
-  "name": "petrol",
-  "category": "Transportation",
-  "date": "24/03/2025",
-  "amount": "20.00"
+  "expenseName": "Rice",
+  "expenseCategory": "Food",
+  "amountSpent": "20.00",
+  "date": "2/04/2025"
 }
 
 ### Update Employee Info by id
-PUT http://localhost:3000/employees/67e18078fc5fbe68374dc268 HTTP/1.1
+PUT http://localhost:3000/employees/67f49b77a86a09bae533a45e HTTP/1.1
 content-type: application/json
 
 {
-"firstName": "Raphael",
+"firstName": "Robertson",
 "lastName": "Dotse",
 "birthDay": "11/11/2011",
 "email": "raphael@gmail.com",
@@ -58,15 +57,16 @@ PUT http://localhost:3000/expenses/67e1519d7e6ca89b6791efa7 HTTP/1.1
 content-type: application/json
 
 {
-  "name": "Gasoline",
-  "category": "Transportation",
-  "date": "20/03/2025",
-  "amount": "50.00"
+  "expenseName": "Oil",
+  "expenseCategory": "Food",
+  "amountSpent": "20.00",
+  "date": "2/04/2025"
 }
 
 
+
 ### DELETE Employee Info
-DELETE http://localhost:3000/employees/67e18078fc5fbe68374dc268 HTTP/1.1
+DELETE http://localhost:3000/employees/67f49b77a86a09bae533a45e HTTP/1.1
 
 ### DELETE expenses data by id
 DELETE http://localhost:3000/expenses/67e1519d7e6ca89b6791efa7 HTTP/1.1
@@ -124,7 +124,7 @@ content-type: application/json
 }
 
 ### Update Employee Info
-PUT https://crud-practice-jtlg.onrender.com/67e18078fc5fbe68374dc268 HTTP/1.1
+PUT https://crud-practice-jtlg.onrender.com/67e1519d7e6ca89b6791efa HTTP/1.1
 content-type: application/json
 
 {
