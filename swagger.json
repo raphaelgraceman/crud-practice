@@ -5,7 +5,7 @@
     "description": "CRUD PRACTICE API",
     "version": "1.0.0"
   },
-  "host": "localhost:3000",
+  "host": "crud-practice-jtlg.onrender.com",
   "basePath": "/",
   "schemes": [
     "https",
@@ -22,16 +22,7 @@
         }
       }
     },
-    "/api-docs": {
-      "get": {
-        "description": "",
-        "responses": {
-          "default": {
-            "description": ""
-          }
-        }
-      }
-    },
+  
     "/employees/": {
       "get": {
         "description": "",
