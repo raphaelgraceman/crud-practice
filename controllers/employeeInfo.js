@@ -53,6 +53,7 @@ const updateEmployeeInfo = async (req, res) => {
     //#swagger tags =['Welcome to the Info View']
     if (!ObjectId.isValid(req.params.id)) {
       res.status(400).json('Must use a valid employee id to update Employee Info');
+      res.status(404).json('Employee Info record not found');
     }
     const employeeId = new ObjectId(req.params.id);
     const employee = {

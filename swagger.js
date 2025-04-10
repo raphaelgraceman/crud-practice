@@ -5,7 +5,7 @@ const doc = {
     title: 'CRUD API',
     description: 'CRUD PRACTICE API'
   },
-  host: 'localhost:3000',
+  host: 'crud-practice-jtlg.onrender.com',
   schemes: ['https', 'http']
 };
 

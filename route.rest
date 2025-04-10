@@ -9,10 +9,10 @@ GET http://localhost:3000/employees
 GET http://localhost:3000/expenses      
 
 ### getSingle employee info by id
-GET http://localhost:3000/employees/67f49b77a86a09bae533a45e
+GET http://localhost:3000/employees/67e263d4b7b42a4fd52c76e1
 
 ### getSingle expenses data by id
-GET http://localhost:3000/expenses/67e1519d7e6ca89b6791efa7
+GET http://localhost:3000/expenses/67e26707b7b42a4fd52c76e5
 
 ### Add employee info 
 POST http://localhost:3000/employees HTTP/1.1
@@ -45,19 +45,19 @@ content-type: application/json
 }
 
 ### Update Employee Info by id
-PUT http://localhost:3000/employees/67f49b77a86a09bae533a45e HTTP/1.1
+PUT http://localhost:3000/employees/67f49b77a86a09bae533a HTTP/1.1
 content-type: application/json
 
 {
-  "firstName": "#",
-  "lastName": "#",
-  "birthDay": "#",
-  "email": "#",
-  "department": "#",
-  "appointmentDate": "#",
-  "salary": "#",
-  "qualification": "#",
-  "function": "#"
+  "firstName": "Eric",
+  "lastName": "Monday",
+  "birthDay": "3/13/2012",
+  "email": "monday@gmail.com",
+  "department": "Finance",
+  "appointmentDate": "12/2/2024",
+  "salary": "4000.00",
+  "qualification": "Masters Degree",
+  "function": "Manager"
 }
 
 ### Update Expenses data by id
@@ -96,7 +96,7 @@ GET https://crud-practice-jtlg.onrender.com/employees
 GET https://crud-practice-jtlg.onrender.com/expenses
 
 ### Get employees by id
-GET https://crud-practice-jtlg.onrender.com/employees/67e18078fc5fbe68374dc268
+GET https://crud-practice-jtlg.onrender.com/employees/67e263d4b7b42a4fd52c76e1
 
 
 ### Get expenses by id
