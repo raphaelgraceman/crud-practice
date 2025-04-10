@@ -28,7 +28,7 @@ const getSingleExpenses = async(req, res) => {
     }); 
 };
 
-//Create Employee
+//Create Expense
 const addExpenses = async (req, res) => {
      //#swagger tags =['Welcome to the Info View']
     const expense = {
@@ -45,7 +45,7 @@ const addExpenses = async (req, res) => {
     }
 };
 
-//Update Employee Info
+//Update Expense Info
 const updateExpenses = async (req, res) => {
     //#swagger tags =['Welcome to the Info View']
     if (!ObjectId.isValid(req.params.id)) {
@@ -57,6 +57,9 @@ const updateExpenses = async (req, res) => {
       expenseCategory: req.body.expenseCategory,
       amountSpent: req.body.amountSpent,
       date: req.body.date,
+      month: req.body.month,
+      day: req.body.day,
+      paymentType: req.body.paymentType
     };
     const response = await mongodb
       .getDatabase().db().collection('expenses').replaceOne({ _id: expenseId }, expense);
@@ -79,7 +82,7 @@ const deleteExpenses = async (req, res) => {
   const response = await mongodb.getDatabase().db().collection('expenses').deleteOne({ _id: expenseId }, true);
   console.log(response);
   if (response.deletedCount > 0) {
-    res.status(204).send();
+    res.status(201).send('Deleted successfully');
   } else {
     res.status(500).json(response.error || 'Error occurred while deleting the Expenditure Info.');
   }

@@ -17,14 +17,17 @@ GET http://localhost:3000/expenses/67e1519d7e6ca89b6791efa7
 ### Add employee info 
 POST http://localhost:3000/employees HTTP/1.1
 content-type: application/json
+
   {
-    "firstName": "Matthew",
-    "lastName": "John Doe",
-    "birthDay": null,
-    "email": "jaelwilde@gmail.com",
-    "department": "Administrative",
-    "appointedDate": null,
-    "salary": "4,000.00"
+    "firstName": "#",
+    "lastName": "#",
+    "birthDay": "#",
+    "email": "#",
+    "department": "#",
+    "appointmentDate": "#",
+    "salary": "#",
+    "qualification": "#",
+    "function": "#"
   }
 
 ### Add expenses Data
@@ -32,10 +35,13 @@ POST http://localhost:3000/expenses HTTP/1.1
 content-type: application/json
 
 {
-  "expenseName": "Rice",
-  "expenseCategory": "Food",
-  "amountSpent": "20.00",
-  "date": "2/04/2025"
+  "expenseName": "Gasoline",
+  "expenseCategory": "Transportation",
+  "amountSpent": "100.00",
+  "date": "#",
+  "month": "#",
+  "day": "#",
+  "paymentType": "#"
 }
 
 ### Update Employee Info by id
@@ -43,13 +49,15 @@ PUT http://localhost:3000/employees/67f49b77a86a09bae533a45e HTTP/1.1
 content-type: application/json
 
 {
-"firstName": "Robertson",
-"lastName": "Dotse",
-"birthDay": "11/11/2011",
-"email": "raphael@gmail.com",
-"department": "Administrative",
-"appointmentDate": "01/12/2024",
-"salary": "4,000.00"
+  "firstName": "#",
+  "lastName": "#",
+  "birthDay": "#",
+  "email": "#",
+  "department": "#",
+  "appointmentDate": "#",
+  "salary": "#",
+  "qualification": "#",
+  "function": "#"
 }
 
 ### Update Expenses data by id
@@ -57,10 +65,13 @@ PUT http://localhost:3000/expenses/67e1519d7e6ca89b6791efa7 HTTP/1.1
 content-type: application/json
 
 {
-  "expenseName": "Oil",
-  "expenseCategory": "Food",
-  "amountSpent": "20.00",
-  "date": "2/04/2025"
+  "expenseName": "Gasoline",
+  "expenseCategory": "Transportation",
+  "amountSpent": "100.00",
+  "date": "20/03/2025",
+  "month": "#",
+  "day": "#",
+  "paymentType": "#"
 }
 
 
@@ -69,7 +80,7 @@ content-type: application/json
 DELETE http://localhost:3000/employees/67f49b77a86a09bae533a45e HTTP/1.1
 
 ### DELETE expenses data by id
-DELETE http://localhost:3000/expenses/67e1519d7e6ca89b6791efa7 HTTP/1.1
+DELETE http://localhost:3000/expenses/67f6d560bc89832cb24c770a HTTP/1.1
 
 
 
@@ -114,17 +125,17 @@ POST https://crud-practice-jtlg.onrender.com/expenses HTTP/1.1
 content-type: application/json
 
 {
-  "name": "Gasoline",
-  "category": "Transportation",
+  "expenseName": "Gasoline",
+  "expenseCategory": "Transportation",
+  "amountSpent": "100.00",
   "date": "20/03/2025",
-  "amount": "50.00",
   "month": "#",
   "day": "#",
   "paymentType": "#"
 }
 
 ### Update Employee Info
-PUT https://crud-practice-jtlg.onrender.com/67e1519d7e6ca89b6791efa HTTP/1.1
+PUT https://crud-practice-jtlg.onrender.com/67f6dac756acfb4bd3e07124 HTTP/1.1
 content-type: application/json
 
 {
@@ -144,17 +155,17 @@ PUT https://crud-practice-jtlg.onrender.com/expenses/67e1519d7e6ca89b6791efa7 HT
 content-type: application/json
 
 {
-  "name": "Gasoline",
-  "category": "Transportation",
+  "expenseName": "Gasoline",
+  "expenseCategory": "Transportation",
+  "amountSpent": "100.00",
   "date": "20/03/2025",
-  "amount": "100.00",
   "month": "#",
   "day": "#",
   "paymentType": "#"
 }
 
 ### DELETE Employee Info
-DELETE https://crud-practice-jtlg.onrender.com/employees/67e18078fc5fbe68374dc268 HTTP/1.1
+DELETE https://crud-practice-jtlg.onrender.com/employees/67f6dac756acfb4bd3e07124 HTTP/1.1
 
 ### DELETE Expenses Data
 DELETE https://crud-practice-jtlg.onrender.com/expenses/67e1519d7e6ca89b6791efa7 HTTP/1.1

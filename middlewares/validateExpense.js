@@ -5,7 +5,10 @@ const addExpenseData = (req, res, next) => {
     expenseName: 'required|string',
     expenseCategory: 'required|string',
     amountSpent: 'required|string',
-    date: 'required|date'
+    date: 'required|date',
+    month: 'string',
+    day: 'string',
+    paymentType: 'required|string'
   };
   validator(req.body, validationRule, {}, (err, status) => {
     if (!status) {

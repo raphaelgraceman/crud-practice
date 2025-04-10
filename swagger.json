@@ -5,10 +5,11 @@
     "description": "CRUD PRACTICE API",
     "version": "1.0.0"
   },
-  "host": "crud-practice-jtlg.onrender.com",
+  "host": "localhost:3000",
   "basePath": "/",
   "schemes": [
-    "https"
+    "https",
+    "http"
   ],
   "paths": {
     "/": {
@@ -17,6 +18,16 @@
         "responses": {
           "200": {
             "description": "OK"
+          }
+        }
+      }
+    },
+    "/api-docs": {
+      "get": {
+        "description": "",
+        "responses": {
+          "default": {
+            "description": ""
           }
         }
       }
@@ -70,6 +81,9 @@
         "responses": {
           "201": {
             "description": "Created"
+          },
+          "412": {
+            "description": "Precondition Failed"
           },
           "500": {
             "description": "Internal Server Error"
@@ -141,11 +155,14 @@
           }
         ],
         "responses": {
-          "204": {
-            "description": "No Content"
+          "201": {
+            "description": "Created"
           },
           "400": {
             "description": "Bad Request"
+          },
+          "412": {
+            "description": "Precondition Failed"
           },
           "500": {
             "description": "Internal Server Error"
@@ -163,14 +180,14 @@
           }
         ],
         "responses": {
-          "204": {
-            "description": "No Content"
+          "201": {
+            "description": "Created"
           },
           "400": {
             "description": "Bad Request"
           },
-          "500": {
-            "description": "Internal Server Error"
+          "404": {
+            "description": "Not Found"
           }
         }
       }
@@ -215,6 +232,9 @@
         "responses": {
           "201": {
             "description": "Created"
+          },
+          "412": {
+            "description": "Precondition Failed"
           },
           "500": {
             "description": "Internal Server Error"
@@ -271,6 +291,15 @@
                 },
                 "date": {
                   "example": "any"
+                },
+                "month": {
+                  "example": "any"
+                },
+                "day": {
+                  "example": "any"
+                },
+                "paymentType": {
+                  "example": "any"
                 }
               }
             }
@@ -282,6 +311,9 @@
           },
           "400": {
             "description": "Bad Request"
+          },
+          "412": {
+            "description": "Precondition Failed"
           },
           "500": {
             "description": "Internal Server Error"
