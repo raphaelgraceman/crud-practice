@@ -59,7 +59,7 @@
                 "department": {
                   "example": "any"
                 },
-                "appointedDate": {
+                "appointmentDate": {
                   "example": "any"
                 },
                 "salary": {

@@ -37,7 +37,7 @@ const addEmployeeInfo = async (req, res) => {
       birthDay: req.body.birthDay,
       email: req.body.email,
       department: req.body.department,
-      appointmentDate: req.body.appointedDate,
+      appointmentDate: req.body.appointmentDate,
       salary: req.body.salary,
       qualification: req.body.qualification,
       function: req.body.function
