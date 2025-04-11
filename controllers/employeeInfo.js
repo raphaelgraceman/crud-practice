@@ -61,7 +61,7 @@ const updateEmployeeInfo = async (req, res) => {
     const employee = {
         firstName: req.body.firstName,
         lastName: req.body.lastName,
-        birthDay: req.body.birthday,
+        birthDay: req.body.birthDay,
         email: req.body.email,
         department: req.body.department,
         appointedDate: req.body.appointedDate,

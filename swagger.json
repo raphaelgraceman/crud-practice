@@ -22,7 +22,7 @@
         }
       }
     },
-  
+
     "/employees/": {
       "get": {
         "description": "",
@@ -50,7 +50,7 @@
                 "lastName": {
                   "example": "any"
                 },
-                "birthday": {
+                "birthDay": {
                   "example": "any"
                 },
                 "email": {
@@ -132,7 +132,7 @@
                 "lastName": {
                   "example": "any"
                 },
-                "birthday": {
+                "birthDay": {
                   "example": "any"
                 },
                 "email": {
