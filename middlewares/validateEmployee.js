@@ -8,7 +8,9 @@ const addEmployeeInfo = (req, res, next) => {
     email: 'required|email',
     department: 'required|string',
     appointmentDate: 'required|date',
-    salary: 'required|string'
+    salary: 'required|string',
+    qualification: 'string',
+    function: 'string'
   };
   validator(req.body, validationRule, {}, (err, status) => {
     if (!status) {

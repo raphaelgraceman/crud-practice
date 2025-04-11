@@ -36,6 +36,9 @@ const addExpenses = async (req, res) => {
       expenseCategory: req.body.expenseCategory,
       amountSpent: req.body.amountSpent,
       date: req.body.date,
+      month: req.body.month,
+      day: req.body.day,
+      paymentType: req.body.paymentType
     };
     const response = await mongodb.getDatabase().db().collection('expenses').insertOne(expense);
     if (response.acknowledged) {
@@ -87,6 +90,5 @@ const deleteExpenses = async (req, res) => {
     res.status(500).json(response.error || 'Error occurred while deleting the Expenditure Info.');
   }
 };
-
 
 module.exports = {getAllExpenses, getSingleExpenses, addExpenses, updateExpenses, deleteExpenses};
