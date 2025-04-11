@@ -37,7 +37,7 @@ const addEmployeeInfo = async (req, res) => {
       birthDay: req.body.birthDay,
       email: req.body.email,
       department: req.body.department,
-      appointedDate: req.body.appointedDate,
+      appointmentDate: req.body.appointedDate,
       salary: req.body.salary,
       qualification: req.body.qualification,
       function: req.body.function
@@ -64,7 +64,7 @@ const updateEmployeeInfo = async (req, res) => {
         birthDay: req.body.birthDay,
         email: req.body.email,
         department: req.body.department,
-        appointedDate: req.body.appointedDate,
+        appointmentDate: req.body.appointedDate,
         salary: req.body.salary,
         qualification: req.body.qualification,
         function: req.body.function
