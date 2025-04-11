@@ -38,7 +38,9 @@ const addEmployeeInfo = async (req, res) => {
       email: req.body.email,
       department: req.body.department,
       appointedDate: req.body.appointedDate,
-      salary: req.body.salary
+      salary: req.body.salary,
+      qualification: req.body.qualification,
+      function: req.body.function
     };
     const response = await mongodb.getDatabase().db().collection('employees').insertOne(employee);
     if (response.acknowledged) {
@@ -63,7 +65,9 @@ const updateEmployeeInfo = async (req, res) => {
         email: req.body.email,
         department: req.body.department,
         appointedDate: req.body.appointedDate,
-        salary: req.body.salary
+        salary: req.body.salary,
+        qualification: req.body.qualification,
+        function: req.body.function
       };
     const response = await mongodb
       .getDatabase().db().collection('employees').replaceOne({ _id: employeeId }, employee);
