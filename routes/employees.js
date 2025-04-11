@@ -10,7 +10,7 @@ router.get('/:id', employeeController.getSingleEmployeeInfo);
 
 router.post('/', validate.addEmployeeInfo, employeeController.addEmployeeInfo);
 
-router.put('/:id', validate.addEmployeeInfo, employeeController.updateEmployeeInfo);
+router.put('/:id', validate.updateEmployeeInfo, employeeController.updateEmployeeInfo);
 
 router.delete('/:id', employeeController.deleteEmployeeInfo);
 

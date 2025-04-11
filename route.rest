@@ -45,16 +45,16 @@ content-type: application/json
 }
 
 ### Update Employee Info by id
-PUT http://localhost:3000/employees/67f49b77a86a09bae533a HTTP/1.1
+PUT http://localhost:3000/employees/67e265deb7b42a4fd52c76e3 HTTP/1.1
 content-type: application/json
 
 {
   "firstName": "Eric",
   "lastName": "Monday",
   "birthDay": "3/13/2012",
-  "email": "#",
+  "email": "",
   "department": "Finance",
-  "appointmentDate": "#",
+  "appointmentDate": "",
   "salary": "4000.00",
   "qualification": "Masters Degree",
   "function": "Manager"

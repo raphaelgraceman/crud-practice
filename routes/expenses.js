@@ -7,7 +7,7 @@ const validate = require('../middlewares/validateExpense');
 router.get('/', expensesController.getAllExpenses);
 router.get('/:id', expensesController.getSingleExpenses);
 router.post('/', validate.addExpenseData, expensesController.addExpenses);
-router.put('/:id', validate.addExpenseData, expensesController.updateExpenses);
+router.put('/:id', validate.updateExpenseData, expensesController.updateExpenses);
 router.delete('/:id', expensesController.deleteExpenses);
 
 
