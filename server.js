@@ -21,7 +21,7 @@ app
     //Initialize express-section
   .use(passport.initialize())
   //let passport on every route call
-  .use(passport.section())
+  .use(passport.session())
     //Allow passport access to use express-section
   .use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
