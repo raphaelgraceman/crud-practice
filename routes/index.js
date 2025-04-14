@@ -2,13 +2,10 @@ const router = require('express').Router();
 const employeeInfoRoute = require('./employees');
 const expensesRoute = require('./expenses');
 const passport = require('passport');
+
+  //#swagger tags =['Welcome to the Info View']
+//get api-docs
 router.use('/', require('./swagger'));
-
-router.get('/', (req, res) => {
-     //#swagger tags =['Welcome to the Info View']
-    res.send('Welcome to the Info View');
-});
-
 //use this path to get all employee information
 router.use('/employees', employeeInfoRoute);
 

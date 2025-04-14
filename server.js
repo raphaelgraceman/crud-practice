@@ -56,9 +56,7 @@ passport.deserializeUser((user, done) => {
   done(null, user)
 });
 //session logged in and out endpoints
-app.get('/', (req, res) => {
-  res.send(req.session.user !== undefined? 
-    `Logged in as ${req.session.user.displayName}` : 'Logged Out')
+app.get('/', (req, res) => { res.send(req.session.user !== undefined ? `Logged in as ${req.session.user.displayName}` : 'Logged Out')
 });
 //github callback passport authentication
 app.get('/github/callback', passport.authenticate('github', {
@@ -76,7 +74,7 @@ mongodb.initDb((err) => {
     else {
         //Display Success message upon Connection
         app.listen(port, () => {
-            console.log('Database listening and Running on port', port);
+            console.log(`Database listening and Running on port`, port);
         });
     }
 });
