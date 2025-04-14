@@ -38,7 +38,7 @@ const updateExpenseData = (req, res, next) => {
     if (!status) {
       res.status(412).send({
         success: false,
-        message: 'Validation failed',
+        message: 'Your request failed upon validation',
         data: err
       });
     } else {

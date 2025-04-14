@@ -6,7 +6,7 @@ const doc = {
     description: 'CRUD PRACTICE API'
   },
   host: 'crud-practice-jtlg.onrender.com',
-  schemes: ['https', 'http']
+  schemes: ['https']
 };
 
 const outputFile = './swagger.json';
