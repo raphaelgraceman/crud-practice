@@ -36,7 +36,7 @@ app
   .use(cors({method: ['GET', 'POST', 'DELETE', 'UPDATE', 'PUT', 'PATCH']}))
   .use(cors({origin: '#'}))
 
-  .use("/", require("./routes"));
+  .use("/", require("./routes/index"));
   passport.use(new GitHubStrategy({
     clientID: process.env.GITHUB_CLIENT_ID,
     clientSecret: process.env.GITHUB_CLIENT_SECRET,
